@@ -6,6 +6,9 @@ public class slot_machine{
         int balance=0;
         int topup;
         int bet;
+        String[] spin={"💵","🍒","🌟","🔔"};
+        Random rand=new Random();
+        boolean again=true;
 
 
 
@@ -37,6 +40,24 @@ public class slot_machine{
         }}while(true);
 
         System.out.println("Spinning.....");
+        do { 
+            int i=rand.nextInt(4);
+            int j=rand.nextInt(4);
+            int k=rand.nextInt(4);
+            System.out.print(spin[i]+" "+spin[j]+" "+spin[k]+" \n");
+
+
+
+            System.out.print("Do you wish to continue(Yes/No)");
+            String Checkcontinue=scan.nextLine().toLowerCase();
+            if (Checkcontinue.equals("no") ){
+                System.out.println("Thank you");
+                again=false;
+
+            }
+
+            
+        } while (again);
 
         
         
