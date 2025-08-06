@@ -85,7 +85,7 @@ class Alarm implements Runnable{
             Clip clip=AudioSystem.getClip();
             clip.open(audio);
             clip.start();
-            System.out.println("Press enter to stop");
+            System.out.println("Press enter to stop:");
             scan.nextLine();
             clip.stop();
         }
