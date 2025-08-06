@@ -100,7 +100,7 @@ public class slot_machine{
         if(balance>=spend) System.out.println("You have got:₹"+(balance-spend));
         else System.out.println("You have lose:₹"+(spend-balance));
         System.out.println("************************************");
-        System.out.println("      Thank You,Visit again.         ");
+        System.out.println("      Thank You,Visit again        ");
         System.out.println("************************************");
 
         
