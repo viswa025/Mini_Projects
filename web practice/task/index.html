@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Study Plan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        :root {
+            --bg-color: #121212;
+            --card-bg-color: #1e1e1e;
+            --text-color: #e0e0e0;
+            --text-muted-color: #888;
+            --border-color: #333;
+            --accent-color: #4CAF50; /* Green for completed items */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px 10px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .schedule-card {
+            background-color: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .schedule-card h2 {
+            margin-top: 0;
+            font-size: 1.2em;
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .schedule-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .schedule-list li {
+            display: flex;
+            align-items: flex-start;
+            padding: 10px 0;
+            line-height: 1.5;
+        }
+        
+        .schedule-list li:not(:last-child) {
+             border-bottom: 1px solid #2a2a2a;
+        }
+
+        .checkbox {
+            margin-right: 12px;
+            font-size: 1.2em;
+            margin-top: 2px;
+        }
+
+        .task-details {
+            flex-grow: 1;
+        }
+
+        .task-title {
+            display: block;
+        }
+
+        .task-meta {
+            font-size: 0.9em;
+            color: var(--text-muted-color);
+        }
+
+        .task-done {
+            color: var(--text-muted-color);
+            opacity: 0.7;
+        }
+
+        .task-done .checkbox {
+            color: var(--accent-color);
+        }
+        
+        .no-study {
+            color: var(--text-muted-color);
+            font-style: italic;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Web Development Courses</h1>
+
+        <div class="schedule-card">
+            <h2>August 27</h2>
+            <ul class="schedule-list">
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Cloud</span>
+                        <span class="task-meta">11:00 AM - 1:00 PM (2:00 of 3:07)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Cloud</span>
+                        <span class="task-meta">4:00 PM - 5:00 PM (1:00, total 3:00)</span>
+                    </div>
+                </li>
+                <li class="task-done">
+                    <span class="checkbox">☑</span>
+                    <div class="task-details">
+                        <span class="task-title">Cloud</span>
+                        <span class="task-meta">7:00 PM - 7:07 PM (0:07, done)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="schedule-card">
+            <h2>August 26</h2>
+            <ul class="schedule-list">
+                <li class="task-done">
+                    <span class="checkbox">☑</span>
+                    <div class="task-details">
+                        <span class="task-title">Postman</span>
+                        <span class="task-meta">11:00 AM - 11:37 AM (0:37, done)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Cloud</span>
+                        <span class="task-meta">11:37 AM - 1:00 PM (1:23 of 6:30)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Cloud</span>
+                        <span class="task-meta">4:00 PM - 5:00 PM (1:00, total 2:23)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Cloud</span>
+                        <span class="task-meta">7:00 PM - 8:00 PM (1:00, total 3:23)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="schedule-card">
+            <h2>August 25</h2>
+            <ul class="schedule-list">
+                <li class="task-done">
+                    <span class="checkbox">☑</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">11:00 AM - 12:01 PM (1:01, done)</span>
+                    </div>
+                </li>
+                <li class="task-done">
+                    <span class="checkbox">☑</span>
+                    <div class="task-details">
+                        <span class="task-title">JWT Authentication</span>
+                        <span class="task-meta">12:01 PM - 12:58 PM (0:57, done)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Postman</span>
+                        <span class="task-meta">12:58 PM - 1:00 PM (0:02 of 2:39)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Postman</span>
+                        <span class="task-meta">4:00 PM - 5:00 PM (1:00, total 1:02)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Postman</span>
+                        <span class="task-meta">7:00 PM - 8:00 PM (1:00, total 2:02)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="schedule-card">
+            <h2>August 24</h2>
+            <p class="no-study">No Study (Sunday)</p>
+        </div>
+
+        <div class="schedule-card">
+            <h2>August 23</h2>
+            <ul class="schedule-list">
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">11:00 AM - 1:00 PM (2:00 of 5:01)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">4:00 PM - 5:00 PM (1:00, total 3:00)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">7:00 PM - 8:00 PM (1:00, total 4:00)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="schedule-card">
+            <h2>August 22</h2>
+            <ul class="schedule-list">
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">11:00 AM - 1:00 PM (2:00 of 9:01)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">4:00 PM - 5:00 PM (1:00, total 3:00)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">7:00 PM - 8:00 PM (1:00, total 4:00)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="schedule-card">
+            <h2>August 21</h2>
+            <ul class="schedule-list">
+                <li class="task-done">
+                    <span class="checkbox">☑</span>
+                    <div class="task-details">
+                        <span class="task-title">Tailwind CSS</span>
+                        <span class="task-meta">11:00 AM - 11:25 AM (0:25, done)</span>
+                    </div>
+                </li>
+                <li class="task-done">
+                    <span class="checkbox">☑</span>
+                    <div class="task-details">
+                        <span class="task-title">MongoDB</span>
+                        <span class="task-meta">11:25 AM - 12:55 PM (1:30, done)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">12:55 PM - 1:00 PM (0:05 of 11:06)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">4:00 PM - 5:00 PM (1:00, total 1:05)</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Node JS</span>
+                        <span class="task-meta">7:00 PM - 8:00 PM (1:00, total 2:05)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="schedule-card">
+            <h2>August 20</h2>
+            <ul class="schedule-list">
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Tailwind CSS</span>
+                        <span class="task-meta">11:00 AM - 1:00 PM (2:00 of 4:25)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Tailwind CSS</span>
+                        <span class="task-meta">4:00 PM - 5:00 PM (1:00, total 3:00)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Tailwind CSS</span>
+                        <span class="task-meta">7:00 PM - 8:00 PM (1:00, total 4:00)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="schedule-card">
+            <h2>August 19</h2>
+            <ul class="schedule-list">
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">React Full Course</span>
+                        <span class="task-meta">11:00 AM - 1:00 PM (2:00 of 3:43)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">React Full Course</span>
+                        <span class="task-meta">4:00 PM - 5:00 PM (1:00, total 3:00)</span>
+                    </div>
+                </li>
+                <li class="task-done">
+                    <span class="checkbox">☑</span>
+                    <div class="task-details">
+                        <span class="task-title">React Full Course</span>
+                        <span class="task-meta">7:00 PM - 7:43 PM (0:43, done)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">Tailwind CSS</span>
+                        <span class="task-meta">7:43 PM - 8:00 PM (0:17 of 4:42)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="schedule-card">
+            <h2>August 18</h2>
+            <ul class="schedule-list">
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">JavaScript Full Course</span>
+                        <span class="task-meta">11:00 AM - 1:00 PM (2:00 of 2:30)</span>
+                    </div>
+                </li>
+                <li class="task-done">
+                    <span class="checkbox">☑</span>
+                    <div class="task-details">
+                        <span class="task-title">JavaScript Full Course</span>
+                        <span class="task-meta">4:00 PM - 4:30 PM (0:30, done)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">React Full Course</span>
+                        <span class="task-meta">4:30 PM - 5:00 PM (0:30 of 5:13)</span>
+                    </div>
+                </li>
+                 <li>
+                    <span class="checkbox">☐</span>
+                    <div class="task-details">
+                        <span class="task-title">React Full Course</span>
+                        <span class="task-meta">7:00 PM - 8:00 PM (1:00, total 1:30)</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="schedule-card">
+            <h2>August 17</h2>
+            <p class="no-study">No Study (Sunday)</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
