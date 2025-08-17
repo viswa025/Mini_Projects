@@ -1,0 +1,88 @@
+body{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
+}
+#call{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+
+    justify-content: center;
+    height: 80vh;
+    width: 50vh;
+    background-color:#4d4d4d;
+    border-radius: 50px;
+  
+    
+    
+}
+#call {
+   padding-top: 40px !important;
+}
+#keys{
+    
+    padding: 5px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+    
+    
+   
+}
+#keys button{
+      padding: 3px;
+      font-family:  'Times New Roman', serif;
+      text-align: center;
+      height: 60px;
+      width: 60px;
+      font-weight: 200;
+     
+
+      
+       
+    font-size: 3em;
+    border: none;
+      background-color:#D6D85D;
+     border-radius: 7cm;
+     cursor: pointer;}
+.op {
+  background-color: black !important;
+  color: white;
+}
+
+
+input{
+    padding-left: 50px;
+
+    font-size: 2em;
+    height: 70px;
+    border: none;
+    background-color:hsl(0, 0%, 70%);
+    border-radius: 1cm;
+    width: 300px;
+     margin-bottom:40px;
+    
+
+}
+#keys button:hover{
+    background-color:hsl(63, 100%, 80%);
+
+}
+#keys button:active{
+    background-color:hsl(63, 100%,100%);
+
+}
+.op:hover{
+     background-color:hsl(0, 0%,40%)!important;
+
+}
+.op:active{
+     background-color:hsl(0, 0%,60%)!important;
+
+}
