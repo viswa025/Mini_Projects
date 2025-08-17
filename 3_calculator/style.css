@@ -2,7 +2,21 @@ body{
    display: flex;
    align-items: center;
    justify-content: center;
+   
+   
     
+}
+@media (max-width: 768px) {
+   #call {
+      width: 100%;
+      max-width: none;
+      height: 100vh;
+      border-radius: 0; 
+   }
+   body {
+      align-items: stretch; 
+      justify-content: stretch;
+   }
 }
 #call{
     
